@@ -1,0 +1,5 @@
+name=PRISM HUD
+desc=HUD mod
+creator=Jarkin
+steamid=76561198022106397
+version=1

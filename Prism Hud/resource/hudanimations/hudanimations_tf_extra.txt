@@ -1,0 +1,101 @@
+//these get run at the start
+//if what's being animated is declared inside hudlayout, the animation will be successful
+//if not, the animation will fail
+//if they get loaded ingame they will be animatable, but the only things that do not require being in a server and seeing it are things directly in hudlayout
+
+event ScopeRemoval
+{
+	Animate HudScope Position "9999 9999" Linear 0.0 0.0
+	Animate HudScope Position "9999 9999" Linear 0.0 100.0
+	RunEvent ScopeRemovalLoop 0.1
+}
+event ScopeRemovalLoop
+{
+	RunEvent ScopeRemoval 0.1
+}
+event ScopeRemovalUndo
+{
+	Animate HudScope Position	"0 0" Linear 0.0 0.0
+}
+
+event vmOpaque
+{
+	Animate TransparentViewmodelMask Position "9999 9999" Linear 0.0 0.0
+	Animate TransparentViewmodelMask2 Position "9999 9999" Linear 0.0 0.0
+}
+event vmTrans
+{
+	Animate TransparentViewmodelMask Position "0 0" Linear 0.0 0.0
+	Animate TransparentViewmodelMask2 Position "9999 9999" Linear 0.0 0.0
+}
+event vmTrans2
+{
+	Animate TransparentViewmodelMask Position "9999 9999" Linear 0.0 0.0
+	Animate TransparentViewmodelMask2 Position "0 0" Linear 0.0 0.0
+}
+
+event teambarYes
+{
+	Animate TeamBarBelowHealth Alpha "255" Linear 0.0 0.0
+}
+event teambarNo
+{
+	Animate TeamBarBelowHealth Alpha "0" Linear 0.0 0.0
+}
+
+event HudNormal
+{
+	Animate HudPlayerStatus Position "0 0" Linear 0.0 0.0
+	Animate HudWeaponAmmo Position "10 0" Linear 0.0 0.0
+	Animate HudMedicCharge Position "c-200 c70" Linear 0.0 0.0
+	Animate HudHealthcrossFix Position "c-157 c92" Linear 0.0 0.0
+	Animate TeamBarBelowHealth Position "c-184 c126" Linear 0.0 0.0
+}
+event HudLower
+{
+	Animate HudPlayerStatus Position "0 75" Linear 0.0 0.0
+	Animate HudWeaponAmmo Position "10 75" Linear 0.0 0.0
+	Animate HudMedicCharge Position "c-200 c145" Linear 0.0 0.0
+	Animate HudHealthcrossFix Position "c-157 c167" Linear 0.0 0.0
+	Animate TeamBarBelowHealth Position "c-184 c201" Linear 0.0 0.0
+}
+event HudHigher
+{
+	Animate HudPlayerStatus Position "0 -50" Linear 0.0 0.0
+	Animate HudWeaponAmmo Position "10 -50" Linear 0.0 0.0
+	Animate HudMedicCharge Position "c-200 c20" Linear 0.0 0.0
+	Animate HudHealthcrossFix Position "c-157 c42" Linear 0.0 0.0
+	Animate TeamBarBelowHealth Position "c-184 c76" Linear 0.0 0.0
+}
+event HudCorners
+{
+	Animate HudPlayerStatus Position "-210 100" Linear 0.0 0.0
+	Animate HudWeaponAmmo Position "230 100" Linear 0.0 0.0
+	Animate HudMedicCharge Position "c20 c170" Linear 0.0 0.0
+	Animate HudHealthcrossFix Position "c-367 c192" Linear 0.0 0.0
+	Animate TeamBarBelowHealth Position "c-394 c226" Linear 0.0 0.0
+}
+event HudBxPos
+{
+	Animate HudPlayerStatus Position "135 37" Linear 0.0 0.0
+	Animate HudWeaponAmmo Position "-120 70" Linear 0.0 0.0
+	Animate HudMedicCharge Position "c-320 c140" Linear 0.0 0.0
+	Animate HudHealthcrossFix Position "c-22 c129" Linear 0.0 0.0
+	Animate TeamBarBelowHealth Position "c-49 c159" Linear 0.0 0.0
+}
+event HudReserveOverCross
+{
+	Animate HudPlayerStatus Position "172 37" Linear 0.0 0.0
+	Animate HudWeaponAmmo Position "-148 37" Linear 0.0 0.0
+	Animate HudMedicCharge Position "c-320 c140" Linear 0.0 0.0
+	Animate HudHealthcrossFix Position "c15 c129" Linear 0.0 0.0
+	Animate TeamBarBelowHealth Position "c-12 c162" Linear 0.0 0.0
+}
+event HudSurf
+{
+	Animate HudPlayerStatus Position "9999 9999" Linear 0.0 0.0
+	Animate HudWeaponAmmo Position "9999 9999" Linear 0.0 0.0
+	Animate HudMedicCharge Position "9999 9999" Linear 0.0 0.0
+	Animate HudHealthcrossFix Position "9999 9999" Linear 0.0 0.0
+	Animate TeamBarBelowHealth Position "9999 9999" Linear 0.0 0.0
+}

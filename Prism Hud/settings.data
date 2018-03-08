@@ -1,0 +1,508 @@
+[BG:#1E1E1E]
+Window();
+
+[Border:0, FG:#000000]
+Banner("scripts/managers/thumbnailBanner.png", "auto", "topleft");
+
+[Name:Resolution, Default:Lower, FG:#008E2A, BG:#00DC44, Border:0]
+GlobalComboBox("Resolution", "Resolution")
+{
+	1360x765 (default)
+	1920x1080
+}
+
+[Border:0, FG:#000000]
+Banner("scripts/managers/thumbnailBannerBottom.png", "auto", "topleft");
+
+[Name:Cap Points, Default:Lower, FG:#008E2A, BG:#00DC44, Border:0]
+GlobalComboBox("CapPoints", "Cap Points")
+{
+	Stock Cappoints (default)
+	Circle Cappoints
+	Dark Bordered Cappoints
+}
+
+[Border:0, FG:#000000]
+Banner("scripts/managers/thumbnailBannerBottom.png", "auto", "topleft");
+
+[Name:Chat Position, Default:Lower, FG:#008E2A, BG:#00DC44, Border:0]
+GlobalComboBox("ChatPosition", "Chat Position")
+{
+	Lower (default)
+	Lower + long history
+	Upper
+	Above Killfeed
+}
+
+[Border:0, FG:#000000]
+Banner("scripts/managers/thumbnailBannerBottom.png", "auto", "topleft");
+
+[Name:3D Player Model, Default:Lower, FG:#008E2A, BG:#00DC44, Border:0]
+GlobalComboBox("3Dplayermodel", "3D Player Model")
+{
+	Upper Body (default)
+	Full Body
+	RL Viewmodel
+}
+
+[Border:0, FG:#000000]
+Banner("scripts/managers/thumbnailBannerBottom.png", "auto", "topleft");
+
+[Name:Closed Captions, Default:Lower, FG:#008E2A, BG:#00DC44, Border:0]
+GlobalComboBox("Closedcaptions", "Closed Captions")
+{
+	Above Health (default)
+	Right of Ammo
+	16:9 Crosshair
+}
+
+[Border:0, FG:#000000]
+Banner("scripts/managers/thumbnailBannerBottom.png", "auto", "topleft");
+
+[Name:Damage Account, Default:Lower, FG:#008E2A, BG:#00DC44, Border:0]
+GlobalComboBox("Damageaccount", "Damage Account")
+{
+	Below Ammo (default)
+	Disabled
+	Below Health
+	Below Crosshair
+	u are doing great
+}
+
+[Border:0, FG:#000000]
+Banner("scripts/managers/thumbnailBannerBottom.png", "auto", "topleft");
+
+[Name:Damage Indicator, Default:Lower, FG:#008E2A, BG:#00DC44, Border:0]
+GlobalComboBox("Damageindicator", "Damage Indicator")
+{
+	Default (default)
+	Disabled
+	Stock
+	Around crosshair (10 sec)
+	Crosshair dot (10 sec)
+}
+
+[Border:0, FG:#000000]
+Banner("scripts/managers/thumbnailBannerBottom.png", "auto", "topleft");
+
+[Name:Font, Default:Lower, FG:#008E2A, BG:#00DC44, Border:0]
+GlobalComboBox("Font", "Font")
+{
+	Fira Sans (default)
+	TF2
+	Cerbetica (rays)
+	Suface (m0re)
+	Handel Gothic (quake)
+}
+
+[Border:0, FG:#000000]
+Banner("scripts/managers/thumbnailBannerBottom.png", "auto", "topleft");
+
+[Name:Health Account, Default:Lower, FG:#008E2A, BG:#00DC44, Border:0]
+GlobalComboBox("Healthaccount", "Health Account")
+{
+	Disabled (default)
+	Below Health
+}
+
+[Border:0, FG:#000000]
+Banner("scripts/managers/thumbnailBannerBottom.png", "auto", "topleft");
+
+[Name:Health Cross, Default:Lower, FG:#008E2A, BG:#00DC44, Border:0]
+GlobalComboBox("Healthcross", "Healthcross Type")
+{
+	Circle (default)
+	Disabled
+	Cross (white)
+	Cross (stock)
+	Circle Cross
+	Heart
+	Square
+	Platinum's Face
+	Gmang
+}
+
+[Border:0, FG:#000000]
+Banner("scripts/managers/thumbnailBannerBottom.png", "auto", "topleft");
+
+[Name:Killfeed, Default:Lower, FG:#008E2A, BG:#00DC44, Border:0]
+GlobalComboBox("Killfeed", "Killfeed")
+{
+	Default (default)
+	Disabled
+	Icons only
+	Opaque Backgrounds
+	Transparent Backgrounds
+}
+
+[Border:0, FG:#000000]
+Banner("scripts/managers/thumbnailBannerBottom.png", "auto", "topleft");
+
+[Name:Killstreak Notice, Default:Lower, FG:#008E2A, BG:#00DC44, Border:0]
+GlobalComboBox("Killstreaknotice", "Killstreak Notice Type")
+{
+	Full Line (default)
+	Disabled
+	No Background
+}
+
+[Border:0, FG:#000000]
+Banner("scripts/managers/thumbnailBannerBottom.png", "auto", "topleft");
+
+[Name:Killstreak Number, Default:Lower, FG:#008E2A, BG:#00DC44, Border:0]
+GlobalComboBox("Killstreaknumber", "Killstreak Number Position")
+{
+	Above Killfeed (default)
+	Lower-left Corner
+}
+
+[Border:0, FG:#000000]
+Banner("scripts/managers/thumbnailBannerBottom.png", "auto", "topleft");
+
+[Name:Reserve Ammo, Default:Lower, FG:#008E2A, BG:#00DC44, Border:0]
+GlobalComboBox("Reserveammo", "Reserve Ammo Type")
+{
+	With Slash (default)
+	Transparent Slash
+	Straight Slash
+	Transparent Straight Slash
+	No Slash
+}
+
+[Border:0, FG:#000000]
+Banner("scripts/managers/thumbnailBannerBottom.png", "auto", "topleft");
+
+[Name:Uber Meter, Default:Lower, FG:#008E2A, BG:#00DC44, Border:0]
+GlobalComboBox("Ubermeter", "Uber Meter Type")
+{
+	Meter Behind Number (default)
+	Fills in Number
+}
+
+[Border:0, FG:#000000]
+Banner("scripts/managers/thumbnailBannerBottom.png", "auto", "topleft");
+
+
+
+
+
+
+#if Resolution == "1360x765 (default)"
+{
+	Copy("resource\ui_overrides\_1360x765\chatinputline_x.res", "resource\ui\base_customs\chatinputline_x.res");
+	Copy("resource\ui_overrides\_1360x765\healthcross_resfix.res", "resource\ui\base_customs\healthcross_resfix.res");
+	
+	#if Killstreaknumber == "Above Killfeed (default)"
+{
+	Copy("resource\ui_overrides\_1360x765\huditemeffectmeter_killstreak.res", "resource\ui\huditemeffectmeter_killstreak.res");
+}
+	#if Killstreaknumber == "Lower-left Corner"
+{
+	Copy("resource\ui_overrides\killstreaknumber_traditional\huditemeffectmeter_killstreak.res", "resource\ui\huditemeffectmeter_killstreak.res");
+}
+
+	#if Ubermeter == "Meter Behind Number (default)"
+{
+	Copy("resource\ui_overrides\ubermeter_default_1360x765\hudmediccharge.res", "resource\ui\hudmediccharge.res");
+	Copy("resource\ui_overrides\ubermeter_default\2_rmask_no.cfg", "cfg\PrismHud\refractmasking\commands2.cfg");
+}
+	#if Ubermeter == "Fills in Number"
+{
+	Copy("resource\ui_overrides\ubermeter_fill_in_numbers_1360x765\hudmediccharge.res", "resource\ui\hudmediccharge.res");
+	Copy("resource\ui_overrides\ubermeter_fill_in_numbers\2_rmask_yes.cfg", "cfg\PrismHud\refractmasking\commands2.cfg");
+}
+}
+
+#if Resolution == "1920x1080"
+{
+	Copy("resource\ui_overrides\_1920x1080\chatinputline_x.res", "resource\ui\base_customs\chatinputline_x.res");
+	Copy("resource\ui_overrides\_1920x1080\healthcross_resfix.res", "resource\ui\base_customs\healthcross_resfix.res");
+	
+	#if Killstreaknumber == "Above Killfeed (default)"
+{
+	Copy("resource\ui_overrides\_1920x1080\huditemeffectmeter_killstreak.res", "resource\ui\huditemeffectmeter_killstreak.res");
+}
+	#if Killstreaknumber == "Lower-left Corner"
+{
+	Copy("resource\ui_overrides\killstreaknumber_traditional\huditemeffectmeter_killstreak.res", "resource\ui\huditemeffectmeter_killstreak.res");
+}
+
+	#if Ubermeter == "Meter Behind Number (default)"
+{
+	Copy("resource\ui_overrides\ubermeter_default\hudmediccharge.res", "resource\ui\hudmediccharge.res");
+	Copy("resource\ui_overrides\ubermeter_default\2_rmask_no.cfg", "cfg\PrismHud\refractmasking\commands2.cfg");
+}
+	#if Ubermeter == "Fills in Number"
+{
+	Copy("resource\ui_overrides\ubermeter_fill_in_numbers\hudmediccharge.res", "resource\ui\hudmediccharge.res");
+	Copy("resource\ui_overrides\ubermeter_fill_in_numbers\2_rmask_yes.cfg", "cfg\PrismHud\refractmasking\commands2.cfg");
+}
+}
+
+#if CapPoints == "Circle Cappoints"
+{
+	Copy("resource\ui_overrides\cappoint_circle\controlpointicon.res", "resource\ui\controlpointicon.res");
+	Copy("resource\ui_overrides\cappoint_circle\3_rmask_yes.cfg", "cfg\PrismHud\refractmasking\commands3.cfg");
+	Copy("resource\ui_overrides\_firstrun\mm_4plug_ran_test.res", "resource\ui\base_customs\mm_4plug_ran_test.res");
+}
+#if CapPoints == "Stock Cappoints (default)"
+{
+	Copy("resource\ui_overrides\cappoint_default\controlpointicon.res", "resource\ui\controlpointicon.res");
+	Copy("resource\ui_overrides\cappoint_default\3_rmask_no.cfg", "cfg\PrismHud\refractmasking\commands3.cfg");
+	Copy("resource\ui_overrides\_firstrun\mm_4plug_ran_test.res", "resource\ui\base_customs\mm_4plug_ran_test.res");
+}
+#if CapPoints == "Dark Bordered Cappoints"
+{
+	Copy("resource\ui_overrides\cappoint_darkborder\controlpointicon.res", "resource\ui\controlpointicon.res");
+	Copy("resource\ui_overrides\cappoint_darkborder\3_rmask_no.cfg", "cfg\PrismHud\refractmasking\commands3.cfg");
+	Copy("resource\ui_overrides\_firstrun\mm_4plug_ran_test.res", "resource\ui\base_customs\mm_4plug_ran_test.res");
+}
+
+#if ChatPosition == "Lower (default)"
+{
+	Copy("resource\ui_overrides\chat_default\basechat.res", "resource\ui\basechat.res");
+}
+#if ChatPosition == "Lower + long history"
+{
+	Copy("resource\ui_overrides\chat_long_history\basechat.res", "resource\ui\basechat.res");
+}
+#if ChatPosition == "Upper"
+{
+	Copy("resource\ui_overrides\chat_upper\basechat.res", "resource\ui\basechat.res");
+}
+#if ChatPosition == "Above Killfeed"
+{
+	Copy("resource\ui_overrides\chat_above_killfeed\basechat.res", "resource\ui\basechat.res");
+}
+
+#if 3Dplayermodel == "Upper Body (default)"
+{
+	Copy("resource\ui_overrides\classimages_default\hudplayerclass.res", "resource\ui\hudplayerclass.res");
+}
+#if 3Dplayermodel == "Full Body"
+{
+	Copy("resource\ui_overrides\classimages_fullbody\hudplayerclass.res", "resource\ui\hudplayerclass.res");
+}
+#if 3Dplayermodel == "RL Viewmodel"
+{
+	Copy("resource\ui_overrides\classimages_thnx_colly\hudplayerclass.res", "resource\ui\hudplayerclass.res");
+}
+
+#if Closedcaptions == "Above Health (default)"
+{
+	Copy("resource\ui_overrides\closecaptions_default\clientscheme_closecaption_font.res", "resource\schemes\clientscheme_closecaption_font.res");
+	Copy("resource\ui_overrides\closecaptions_default\closecaptions.res", "resource\ui\base_customs\closecaptions.res");
+}
+#if Closedcaptions == "Right of Ammo"
+{
+	Copy("resource\ui_overrides\closecaptions_right_of_ammo\clientscheme_closecaption_font.res", "resource\schemes\clientscheme_closecaption_font.res");
+	Copy("resource\ui_overrides\closecaptions_right_of_ammo\closecaptions.res", "resource\ui\base_customs\closecaptions.res");
+}
+#if Closedcaptions == "16:9 Crosshair"
+{
+	Copy("resource\ui_overrides\closecaptions_16x9_crosshair\clientscheme_closecaption_font.res", "resource\schemes\clientscheme_closecaption_font.res");
+	Copy("resource\ui_overrides\closecaptions_16x9_crosshair\closecaptions.res", "resource\ui\base_customs\closecaptions.res");
+}
+
+#if Damageaccount == "Below Ammo (default)"
+{
+	Copy("resource\ui_overrides\damageaccount_default\huddamageaccount.res", "resource\ui\huddamageaccount.res");
+}
+#if Damageaccount == "Disabled"
+{
+	Copy("resource\ui_overrides\damageaccount_disabled\huddamageaccount.res", "resource\ui\huddamageaccount.res");
+}
+#if Damageaccount == "Below Health"
+{
+	Copy("resource\ui_overrides\damageaccount_below_health\huddamageaccount.res", "resource\ui\huddamageaccount.res");
+}
+#if Damageaccount == "Below Crosshair"
+{
+	Copy("resource\ui_overrides\damageaccount_below_crosshair\huddamageaccount.res", "resource\ui\huddamageaccount.res");
+}
+#if Damageaccount == "u are doing great"
+{
+	Copy("resource\ui_overrides\damageaccount_doing_great\huddamageaccount.res", "resource\ui\huddamageaccount.res");
+}
+
+#if Damageindicator == "Default (default)"
+{
+	Copy("resource\ui_overrides\damageindicator_default\damageindicator.res", "resource\ui\base_customs\damageindicator.res");
+}
+#if Damageindicator == "Disabled"
+{
+	Copy("resource\ui_overrides\damageindicator_disabled\damageindicator.res", "resource\ui\base_customs\damageindicator.res");
+}
+#if Damageindicator == "Stock"
+{
+	Copy("resource\ui_overrides\damageindicator_stock\damageindicator.res", "resource\ui\base_customs\damageindicator.res");
+}
+#if Damageindicator == "Around Crosshair (10 sec)"
+{
+	Copy("resource\ui_overrides\damageindicator_critheals\damageindicator.res", "resource\ui\base_customs\damageindicator.res");
+}
+#if Damageindicator == "Crosshair dot (10 sec)"
+{
+	Copy("resource\ui_overrides\damageindicator_crosshairdot\damageindicator.res", "resource\ui\base_customs\damageindicator.res");
+}
+
+#if Font == "Fira Sans (default)"
+{
+	Copy("resource\ui_overrides\font_firasans_default\font_fixes_ammo.res", "resource\ui\base_customs\font_fixes_ammo.res");
+	Copy("resource\ui_overrides\font_firasans_default\font_fixes_health.res", "resource\ui\base_customs\font_fixes_health.res");
+	Copy("resource\ui_overrides\font_firasans_default\clientscheme_prism_fonts.res", "resource\schemes\clientscheme_prism_fonts.res");
+}
+#if Font == "TF2"
+{
+	Copy("resource\ui_overrides\font_tf2\font_fixes_ammo.res", "resource\ui\base_customs\font_fixes_ammo.res");
+	Copy("resource\ui_overrides\font_tf2\font_fixes_health.res", "resource\ui\base_customs\font_fixes_health.res");
+	Copy("resource\ui_overrides\font_tf2\clientscheme_prism_fonts.res", "resource\schemes\clientscheme_prism_fonts.res");
+}
+#if Font == "Cerbetica (rays)"
+{
+	Copy("resource\ui_overrides\font_cerbetica\font_fixes_ammo.res", "resource\ui\base_customs\font_fixes_ammo.res");
+	Copy("resource\ui_overrides\font_cerbetica\font_fixes_health.res", "resource\ui\base_customs\font_fixes_health.res");
+	Copy("resource\ui_overrides\font_cerbetica\clientscheme_prism_fonts.res", "resource\schemes\clientscheme_prism_fonts.res");
+}
+#if Font == "Surface (m0re)"
+{
+	Copy("resource\ui_overrides\font_m0re\font_fixes_ammo.res", "resource\ui\base_customs\font_fixes_ammo.res");
+	Copy("resource\ui_overrides\font_m0re\font_fixes_health.res", "resource\ui\base_customs\font_fixes_health.res");
+	Copy("resource\ui_overrides\font_m0re\clientscheme_prism_fonts.res", "resource\schemes\clientscheme_prism_fonts.res");
+}
+#if Font == "Handel Gothic (quake)"
+{
+	Copy("resource\ui_overrides\font_quake\font_fixes_ammo.res", "resource\ui\base_customs\font_fixes_ammo.res");
+	Copy("resource\ui_overrides\font_quake\font_fixes_health.res", "resource\ui\base_customs\font_fixes_health.res");
+	Copy("resource\ui_overrides\font_quake\clientscheme_prism_fonts.res", "resource\schemes\clientscheme_prism_fonts.res");
+}
+
+#if Healthaccount == "Disabled (default)"
+{
+	Copy("resource\ui_overrides\healthaccount_disabled_default\hudhealthaccount.res", "resource\ui\hudhealthaccount.res");
+}
+#if Healthaccount == "Below Health"
+{
+	Copy("resource\ui_overrides\healthaccount_under_health\hudhealthaccount.res", "resource\ui\hudhealthaccount.res");
+}
+
+#if Healthcross == "Circle (default)"
+{
+	Copy("resource\ui_overrides\healthcross_default\healthcross.res", "resource\ui\base_customs\healthcross.res");
+	Copy("resource\ui_overrides\healthcross_default\1_rmask_yes.cfg", "cfg\PrismHud\refractmasking\commands1.cfg");
+}
+#if Healthcross == "Disabled"
+{
+	Copy("resource\ui_overrides\healthcross_disabled\healthcross.res", "resource\ui\base_customs\healthcross.res");
+	Copy("resource\ui_overrides\healthcross_disabled\1_rmask_no.cfg", "cfg\PrismHud\refractmasking\commands1.cfg");
+}
+#if Healthcross == "Cross (white)"
+{
+	Copy("resource\ui_overrides\healthcross_cross\healthcross.res", "resource\ui\base_customs\healthcross.res");
+	Copy("resource\ui_overrides\healthcross_cross\1_rmask_no.cfg", "cfg\PrismHud\refractmasking\commands1.cfg");
+}
+#if Healthcross == "Cross (stock)"
+{
+	Copy("resource\ui_overrides\healthcross_cross_stock\healthcross.res", "resource\ui\base_customs\healthcross.res");
+	Copy("resource\ui_overrides\healthcross_cross_stock\1_rmask_no.cfg", "cfg\PrismHud\refractmasking\commands1.cfg");
+}
+#if Healthcross == "Circle Cross"
+{
+	Copy("resource\ui_overrides\healthcross_circlecross\healthcross.res", "resource\ui\base_customs\healthcross.res");
+	Copy("resource\ui_overrides\healthcross_circlecross\1_rmask_yes.cfg", "cfg\PrismHud\refractmasking\commands1.cfg");
+}
+#if Healthcross == "Heart"
+{
+	Copy("resource\ui_overrides\healthcross_heart\healthcross.res", "resource\ui\base_customs\healthcross.res");
+	Copy("resource\ui_overrides\healthcross_heart\1_rmask_yes.cfg", "cfg\PrismHud\refractmasking\commands1.cfg");
+}
+#if Healthcross == "Square"
+{
+	Copy("resource\ui_overrides\healthcross_square\healthcross.res", "resource\ui\base_customs\healthcross.res");
+	Copy("resource\ui_overrides\healthcross_square\1_rmask_yes.cfg", "cfg\PrismHud\refractmasking\commands1.cfg");
+}
+#if Healthcross == "Platinum's Face"
+{
+	Copy("resource\ui_overrides\healthcross_platinum\healthcross.res", "resource\ui\base_customs\healthcross.res");
+	Copy("resource\ui_overrides\healthcross_platinum\1_rmask_yes.cfg", "cfg\PrismHud\refractmasking\commands1.cfg");
+}
+#if Healthcross == "Gmang"
+{
+	Copy("resource\ui_overrides\healthcross_gmang\healthcross.res", "resource\ui\base_customs\healthcross.res");
+	Copy("resource\ui_overrides\healthcross_gmang\1_rmask_yes.cfg", "cfg\PrismHud\refractmasking\commands1.cfg");
+}
+
+#if Killfeed == "Default (default)"
+{
+	Copy("resource\ui_overrides\killfeed_default\killfeed.res", "resource\ui\base_customs\killfeed.res");
+}
+#if Killfeed == "Disabled"
+{
+	Copy("resource\ui_overrides\killfeed_disabled\killfeed.res", "resource\ui\base_customs\killfeed.res");
+}
+#if Killfeed == "Icons only"
+{
+	Copy("resource\ui_overrides\killfeed_icons_only\killfeed.res", "resource\ui\base_customs\killfeed.res");
+}
+#if Killfeed == "Opaque Backgrounds"
+{
+	Copy("resource\ui_overrides\killfeed_opaque_backgrounds\killfeed.res", "resource\ui\base_customs\killfeed.res");
+}
+#if Killfeed == "Transparent Backgrounds"
+{
+	Copy("resource\ui_overrides\killfeed_transparent_backgrounds\killfeed.res", "resource\ui\base_customs\killfeed.res");
+}
+
+#if Killstreaknotice == "Full Line (default)"
+{
+	Copy("resource\ui_overrides\killstreaknotice_default\hudkillstreaknotice.res", "resource\ui\hudkillstreaknotice.res");
+}
+#if Killstreaknotice == "Disabled"
+{
+	Copy("resource\ui_overrides\killstreaknotice_disabled\hudkillstreaknotice.res", "resource\ui\hudkillstreaknotice.res");
+}
+#if Killstreaknotice == "No Background"
+{
+	Copy("resource\ui_overrides\killstreaknotice_no_bg\hudkillstreaknotice.res", "resource\ui\hudkillstreaknotice.res");
+}
+
+//#if Killstreaknumber == "Above Killfeed (default)"
+//{
+//	Copy("resource\ui_overrides\killstreaknumber_default\huditemeffectmeter_killstreak.res", "resource\ui\huditemeffectmeter_killstreak.res");
+//}
+//#if Killstreaknumber == "Lower-left Corner"
+//{
+//	Copy("resource\ui_overrides\killstreaknumber_traditional\huditemeffectmeter_killstreak.res", "resource\ui\huditemeffectmeter_killstreak.res");
+//}
+
+#if Reserveammo == "With Slash (default)"
+{
+	Copy("resource\ui_overrides\reserveammo_default\ammo_ypos.res", "resource\ui\base_customs\ammo_ypos.res");
+}
+#if Reserveammo == "Transparent Slash"
+{
+	Copy("resource\ui_overrides\reserveammo_slash_alpha\ammo_ypos.res", "resource\ui\base_customs\ammo_ypos.res");
+}
+#if Reserveammo == "Straight Slash"
+{
+	Copy("resource\ui_overrides\reserveammo_straight_slash\ammo_ypos.res", "resource\ui\base_customs\ammo_ypos.res");
+}
+#if Reserveammo == "Transparent Straight Slash"
+{
+	Copy("resource\ui_overrides\reserveammo_straight_slash_alpha\ammo_ypos.res", "resource\ui\base_customs\ammo_ypos.res");
+}
+#if Reserveammo == "No Slash"
+{
+	Copy("resource\ui_overrides\reserveammo_no_slash\ammo_ypos.res", "resource\ui\base_customs\ammo_ypos.res");
+}
+
+#if Ubermeter == "Meter Behind Number (default)"
+{
+	Copy("resource\ui_overrides\ubermeter_default\hudmediccharge.res", "resource\ui\hudmediccharge.res");
+	Copy("resource\ui_overrides\ubermeter_default\2_rmask_no.cfg", "cfg\PrismHud\refractmasking\commands2.cfg");
+}
+#if Ubermeter == "Fills in Number"
+{
+	Copy("resource\ui_overrides\ubermeter_fill_in_numbers\hudmediccharge.res", "resource\ui\hudmediccharge.res");
+	Copy("resource\ui_overrides\ubermeter_fill_in_numbers\2_rmask_yes.cfg", "cfg\PrismHud\refractmasking\commands2.cfg");
+}

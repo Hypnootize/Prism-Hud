@@ -1,0 +1,7 @@
+"UnlitGeneric"
+{
+	"$basetexture" "vgui\replay\thumbnails\mainmenu\buttonbg"
+	"$vertexcolor" 1
+	"$vertexalpha" 1
+	"$ignorez" 1
+}

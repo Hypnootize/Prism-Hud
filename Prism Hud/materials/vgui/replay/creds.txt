@@ -1,0 +1,3 @@
+gliss - transparent viewmodels
+colly - class images (the weapons ones)
+thesupremecommander - statusspec images

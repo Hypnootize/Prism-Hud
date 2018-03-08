@@ -1,0 +1,11 @@
+This removes the scope when you right click as sniper, you know that thing
+
+It works in sv_pure 2 (unlike all the other scope removers floating around currently), but leaves black bars on the sides of the screen for any aspect ratio higher than 4:3
+
+I use another method to fully remove the scope so that the black bars don't show using animations, but doing something to undo animations (hud_reloadscheme) forces you to re-run the animation and I keep this method around as assurance. Every time you do damage, the animation gets run again and the scope is fully removed, but immediately after running hud_reloadscheme and not damaging anyone will make this method worthwhile.
+
+
+
+
+Before you go "that's cheating why would you include this" refract masking also goes through the scope, and since a lot of this hud uses refract masking, it was either get rid of the scope or have it be unbearably ugly with people just using refract masking to get through anyway
+If I could not include this I'd never, but I'd much rather release a fairly-minor-and-mostly-a-convenience exploit if it means keeping the rest of the HUD and all its benefits functional.

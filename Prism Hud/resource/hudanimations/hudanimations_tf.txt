@@ -1,0 +1,290 @@
+//Health Bonus Pulse
+event HudHealthBonusPulse
+{
+	Animate PlayerStatusHealthValueShadow Alpha "0" Linear 0.0 0.0
+	
+	Animate PlayerStatusHealthValueShadow1 Alpha "255" Linear 0.0 0.0
+	Animate PlayerStatusHealthValueShadow2 Alpha "255" Linear 0.0 0.0
+	Animate PlayerStatusHealthValueShadow3 Alpha "255" Linear 0.0 0.0
+	Animate PlayerStatusHealthValueShadow4 Alpha "255" Linear 0.0 0.0
+	Animate PlayerStatusHealthValueShadow5 Alpha "255" Linear 0.0 0.0
+	
+	Animate PlayerStatusHealthValueShadow1	FgColor		"phHealthOverheal1" Linear 0.0 0.0
+	Animate PlayerStatusHealthValueShadow2	FgColor		"phHealthOverheal1" Linear 0.0 0.0
+	Animate PlayerStatusHealthValueShadow3	FgColor		"phHealthOverheal1" Linear 0.0 0.0
+	Animate PlayerStatusHealthValueShadow4	FgColor		"phHealthOverheal1" Linear 0.0 0.0
+	Animate PlayerStatusHealthValueShadow5	FgColor		"phHealthOverheal1" Linear 0.0 0.0
+	
+	Animate PlayerStatusHealthShadow Alpha "0" Linear 0.0 0.0
+	Animate PlayerStatusHealthShadowOverheal1 Alpha "255" Linear 0.0 0.0
+	Animate PlayerStatusHealthShadowOverheal2 Alpha "0" Linear 0.0 0.0
+	
+	Animate TargetHealthLabel	FgColor		"phHealthOverheal1" Linear 0.0 0.0
+	
+	Animate HealthBarBuffTourna   Alpha       "255"           Accel 0.0 0.0
+	Animate HealthBarBuffTourna2  Alpha       "255"           Accel 0.0 0.0
+	Animate PlayerStatusHealthValueSpec FgColor "phHealthOverheal1" Linear 0.0 0.0
+
+	RunEvent HudHealthBonusPulse2 0.2
+}
+
+event HudHealthBonusPulse2
+{
+	Animate PlayerStatusHealthValueShadow1	FgColor		"phHealthOverheal1" Linear 0.0 0.15
+	Animate PlayerStatusHealthValueShadow1	FgColor		"phHealthOverheal2" Linear 0.2 0.15
+	Animate PlayerStatusHealthValueShadow2	FgColor		"phHealthOverheal1" Linear 0.05 0.15
+	Animate PlayerStatusHealthValueShadow2	FgColor		"phHealthOverheal2" Linear 0.25 0.15
+	Animate PlayerStatusHealthValueShadow3	FgColor		"phHealthOverheal1" Linear 0.1 0.15
+	Animate PlayerStatusHealthValueShadow3	FgColor		"phHealthOverheal2" Linear 0.3 0.15
+	Animate PlayerStatusHealthValueShadow4	FgColor		"phHealthOverheal1" Linear 0.15 0.15
+	Animate PlayerStatusHealthValueShadow4	FgColor		"phHealthOverheal2" Linear 0.35 0.15
+	Animate PlayerStatusHealthValueShadow5	FgColor		"phHealthOverheal1" Linear 0.2 0.15
+	Animate PlayerStatusHealthValueShadow5	FgColor		"phHealthOverheal2" Linear 0.4 0.15
+	
+	Animate PlayerStatusHealthShadowOverheal2 Alpha "255" Linear 0.0 0.25
+	Animate PlayerStatusHealthShadowOverheal2 Alpha "0" Linear 0.25 0.25
+	
+	Animate TargetHealthLabel	FgColor		"phHealthOverheal2" Linear 0.0 0.15
+	Animate TargetHealthLabel	FgColor		"phHealthOverheal1" Linear 0.15 0.15
+	Animate TargetHealthLabel	FgColor		"phHealthOverheal2" Linear 0.30 0.15
+	Animate TargetHealthLabel	FgColor		"phHealthOverheal1" Linear 0.45 0.15
+	
+	Animate	HealthBarBuffTourna 	Alpha		"0"				Linear 0.0 0.4
+	Animate	HealthBarBuffTourna 	Alpha		"255"			Linear 0.2 0.2
+	Animate PlayerStatusHealthValueSpec FgColor "phHealthOverheal2" Linear 0.0 0.4
+	Animate PlayerStatusHealthValueSpec FgColor "phHealthOverheal1" Linear 0.2 0.2
+	
+	RunEvent HudHealthBonusPulseLoop	0.55
+}
+
+// call to loop HudHealthBonusPulse
+event HudHealthBonusPulseLoop
+{
+	RunEvent HudHealthBonusPulse2 0.0
+}
+
+event HudHealthBonusPulseStop
+{
+	StopEvent HudHealthBonusPulse 0.0
+	StopEvent HudHealthBonusPulse2 0.0
+	StopEvent HudHealthBonusPulseLoop 0.0
+	
+	Animate PlayerStatusHealthValueShadow1 Alpha "0" Linear 0.0 0.0
+	Animate PlayerStatusHealthValueShadow2 Alpha "0" Linear 0.0 0.0
+	Animate PlayerStatusHealthValueShadow3 Alpha "0" Linear 0.0 0.0
+	Animate PlayerStatusHealthValueShadow4 Alpha "0" Linear 0.0 0.0
+	Animate PlayerStatusHealthValueShadow5 Alpha "0" Linear 0.0 0.0
+	
+	Animate PlayerStatusHealthShadow Alpha "140" Linear 0.0 0.0
+	Animate PlayerStatusHealthShadowOverheal1 Alpha "0" Linear 0.0 0.0
+	Animate PlayerStatusHealthShadowOverheal2 Alpha "0" Linear 0.0 0.0
+	
+	Animate HealthBarBuffTourna   Alpha       "0"           Accel 0.0 0.0
+	Animate HealthBarBuffTourna2  Alpha       "0"           Accel 0.0 0.0
+	Animate PlayerStatusHealthValueSpec FgColor "15 15 15 255" Accel 0.0 0.0
+	
+	Animate TargetHealthLabel	FgColor		"phTitle" Linear 0.0 0.0
+}
+
+//===========================================
+
+//Health Dying Pulse
+event HudHealthDyingPulse
+{
+	Animate PlayerStatusHealthValueShadow Alpha "0" Linear 0.0 0.0
+	
+	Animate PlayerStatusHealthValueShadow1 Alpha "255" Linear 0.0 0.0
+	Animate PlayerStatusHealthValueShadow2 Alpha "255" Linear 0.0 0.0
+	Animate PlayerStatusHealthValueShadow3 Alpha "255" Linear 0.0 0.0
+	Animate PlayerStatusHealthValueShadow4 Alpha "255" Linear 0.0 0.0
+	Animate PlayerStatusHealthValueShadow5 Alpha "255" Linear 0.0 0.0
+	
+	Animate PlayerStatusHealthValueShadow1	FgColor		"phHealthDamaged1" Linear 0.0 0.0
+	Animate PlayerStatusHealthValueShadow2	FgColor		"phHealthDamaged1" Linear 0.0 0.0
+	Animate PlayerStatusHealthValueShadow3	FgColor		"phHealthDamaged1" Linear 0.0 0.0
+	Animate PlayerStatusHealthValueShadow4	FgColor		"phHealthDamaged1" Linear 0.0 0.0
+	Animate PlayerStatusHealthValueShadow5	FgColor		"phHealthDamaged1" Linear 0.0 0.0
+	
+	Animate PlayerStatusHealthAdditive Alpha "0" Linear 0.0 0.0
+	Animate PlayerStatusHealthAdditiveunder Alpha "255" Linear 0.0 0.0
+	
+	Animate TargetHealthLabel	FgColor		"phHealthDamaged1" Linear 0.0 0.0
+	
+	Animate SpecPlayerStatusHealthAdditive Alpha "0" Linear 0.0 0.0
+	Animate SpecPlayerStatusHealthAdditiveunder Alpha "255" Linear 0.0 0.0
+	Animate TourniePlayerStatusHealthAdditive Alpha "0" Linear 0.0 0.0
+	Animate TourniePlayerStatusHealthAdditiveunder Alpha "255" Linear 0.0 0.0
+	
+	RunEvent HudHealthDyingPulseLoop	0.2
+}
+
+event HudHealthDyingPulse2
+{
+	Animate PlayerStatusHealthValueShadow1	FgColor		"phHealthDamaged1" Linear 0.0 0.15
+	Animate PlayerStatusHealthValueShadow1	FgColor		"phHealthDamaged2" Linear 0.2 0.15
+	Animate PlayerStatusHealthValueShadow2	FgColor		"phHealthDamaged1" Linear 0.05 0.15
+	Animate PlayerStatusHealthValueShadow2	FgColor		"phHealthDamaged2" Linear 0.25 0.15
+	Animate PlayerStatusHealthValueShadow3	FgColor		"phHealthDamaged1" Linear 0.1 0.15
+	Animate PlayerStatusHealthValueShadow3	FgColor		"phHealthDamaged2" Linear 0.3 0.15
+	Animate PlayerStatusHealthValueShadow4	FgColor		"phHealthDamaged1" Linear 0.15 0.15
+	Animate PlayerStatusHealthValueShadow4	FgColor		"phHealthDamaged2" Linear 0.35 0.15
+	Animate PlayerStatusHealthValueShadow5	FgColor		"phHealthDamaged1" Linear 0.2 0.15
+	Animate PlayerStatusHealthValueShadow5	FgColor		"phHealthDamaged2" Linear 0.4 0.15
+	
+	Animate TargetHealthLabel	FgColor		"phHealthDamaged2" Linear 0.0 0.15
+	Animate TargetHealthLabel	FgColor		"phHealthDamaged1" Linear 0.15 0.15
+	Animate TargetHealthLabel	FgColor		"phHealthDamaged2" Linear 0.30 0.15
+	Animate TargetHealthLabel	FgColor		"phHealthDamaged1" Linear 0.45 0.15
+	
+	RunEvent HudHealthDyingPulseLoop	0.60
+}
+
+// call to loop HudHealthDyingPulse
+event HudHealthDyingPulseLoop
+{
+	RunEvent HudHealthDyingPulse2 0.0
+}
+
+event HudHealthDyingPulseStop
+{
+	StopEvent HudHealthDyingPulse 0.0
+	StopEvent HudHealthDyingPulse2 0.0
+	StopEvent HudHealthDyingPulseLoop 0.0
+	
+	Animate PlayerStatusHealthValueShadow Alpha "255" Linear 0.0 0.0
+	
+	Animate PlayerStatusHealthValueShadow1 Alpha "0" Linear 0.0 0.0
+	Animate PlayerStatusHealthValueShadow2 Alpha "0" Linear 0.0 0.0
+	Animate PlayerStatusHealthValueShadow3 Alpha "0" Linear 0.0 0.0
+	Animate PlayerStatusHealthValueShadow4 Alpha "0" Linear 0.0 0.0
+	Animate PlayerStatusHealthValueShadow5 Alpha "0" Linear 0.0 0.0
+	
+	Animate PlayerStatusHealthAdditive Alpha "255" Linear 0.0 0.0
+	Animate PlayerStatusHealthAdditiveunder Alpha "0" Linear 0.0 0.0
+	
+	Animate TourniePlayerStatusHealthAdditive Alpha "255" Linear 0.0 0.0
+	Animate TourniePlayerStatusHealthAdditiveunder Alpha "0" Linear 0.0 0.0
+	Animate SpecPlayerStatusHealthAdditive Alpha "255" Linear 0.0 0.0
+	Animate SpecPlayerStatusHealthAdditiveunder Alpha "0" Linear 0.0 0.0
+	
+	Animate TargetHealthLabel	FgColor		"phAmmoReserve" Linear 0.0 0.0
+}
+
+//===========================================
+
+event HudLowAmmoPulse
+{
+	RunEvent HudLowAmmoPulseLoop	0.25
+	
+	Animate AmmoInReserve fgcolor "phAmmoReserveLow" Linear 0.0 0.0
+	Animate AmmoInReserveShadow fgcolor "phAmmoReserveLow" Linear 0.0 0.0
+	
+	Animate PlayerStatusAmmoValueShadow1 Alpha "255" Linear 0.0 0.0
+	Animate PlayerStatusAmmoValueShadow2 Alpha "255" Linear 0.0 0.0
+	Animate PlayerStatusAmmoValueShadow3 Alpha "255" Linear 0.0 0.0
+	Animate PlayerStatusAmmoValueShadow4 Alpha "255" Linear 0.0 0.0
+	Animate PlayerStatusAmmoValueShadow5 Alpha "255" Linear 0.0 0.0
+	Animate PlayerStatusAmmoValueShadow6 Alpha "255" Linear 0.0 0.0
+	
+	Animate PlayerStatusAmmoValueShadow1	FgColor		"phHealthDamaged1" Linear 0.0 0.0
+	Animate PlayerStatusAmmoValueShadow2	FgColor		"phHealthDamaged1" Linear 0.0 0.0
+	Animate PlayerStatusAmmoValueShadow3	FgColor		"phHealthDamaged1" Linear 0.0 0.0
+	Animate PlayerStatusAmmoValueShadow4	FgColor		"phHealthDamaged1" Linear 0.0 0.0
+	Animate PlayerStatusAmmoValueShadow5	FgColor		"phHealthDamaged1" Linear 0.0 0.0
+	Animate PlayerStatusAmmoValueShadow6	FgColor		"phHealthDamaged1" Linear 0.0 0.0
+	
+	Animate AmmoInClipShadowReal Alpha "0" Linear 0.0 0.0
+}
+
+event HudLowAmmoPulse2
+{
+	Animate PlayerStatusAmmoValueShadow1	FgColor		"phHealthDamaged1" Linear 0.0 0.15
+	Animate PlayerStatusAmmoValueShadow1	FgColor		"phHealthDamaged2" Linear 0.2 0.15
+	Animate PlayerStatusAmmoValueShadow2	FgColor		"phHealthDamaged1" Linear 0.05 0.15
+	Animate PlayerStatusAmmoValueShadow2	FgColor		"phHealthDamaged2" Linear 0.25 0.15
+	Animate PlayerStatusAmmoValueShadow3	FgColor		"phHealthDamaged1" Linear 0.1 0.15
+	Animate PlayerStatusAmmoValueShadow3	FgColor		"phHealthDamaged2" Linear 0.3 0.15
+	Animate PlayerStatusAmmoValueShadow4	FgColor		"phHealthDamaged1" Linear 0.15 0.15
+	Animate PlayerStatusAmmoValueShadow4	FgColor		"phHealthDamaged2" Linear 0.35 0.15
+	Animate PlayerStatusAmmoValueShadow5	FgColor		"phHealthDamaged1" Linear 0.2 0.15
+	Animate PlayerStatusAmmoValueShadow5	FgColor		"phHealthDamaged2" Linear 0.4 0.15
+	Animate PlayerStatusAmmoValueShadow6	FgColor		"phHealthDamaged1" Linear 0.2 0.15
+	Animate PlayerStatusAmmoValueShadow6	FgColor		"phHealthDamaged2" Linear 0.4 0.15
+	
+	RunEvent HudLowAmmoPulseLoop	0.55
+}
+
+// call to loop HudLowAmmoPulse
+event HudLowAmmoPulseLoop
+{
+	RunEvent HudLowAmmoPulse2 0.0
+}
+
+event HudLowAmmoPulseStop
+{
+	StopEvent HudLowAmmoPulse 0.0
+	StopEvent HudLowAmmoPulse2 0.0
+	StopEvent HudLowAmmoPulseLoop 0.0
+	
+	Animate AmmoInReserve fgcolor "phAmmoReserve" Linear 0.0 0.0
+	Animate AmmoInReserveShadow fgcolor "phAmmoReserve" Linear 0.0 0.0
+	
+	Animate AmmoInClipShadowReal Alpha "255" Linear 0.0 0.0
+	
+	Animate PlayerStatusAmmoValueShadow1 Alpha "0" Linear 0.0 0.0
+	Animate PlayerStatusAmmoValueShadow2 Alpha "0" Linear 0.0 0.0
+	Animate PlayerStatusAmmoValueShadow3 Alpha "0" Linear 0.0 0.0
+	Animate PlayerStatusAmmoValueShadow4 Alpha "0" Linear 0.0 0.0
+	Animate PlayerStatusAmmoValueShadow5 Alpha "0" Linear 0.0 0.0
+	Animate PlayerStatusAmmoValueShadow6 Alpha "0" Linear 0.0 0.0
+}
+
+//====================================
+
+// Flash the medic charge hud when we have full charge
+
+event HudMedicCharged
+{
+	//Animate	ChargeLabel 	FgColor		"phHealth"		Linear 0.0 0.1
+	//Animate	ChargeLabel 	FgColor		"TanDarker"		Linear 0.3 0.4
+	
+	Animate	ChargeMeter 	FgColor		"phAmmoReserve"		Deaccel 0.0 0.15
+	Animate	ChargeMeter 	FgColor		"phAmmoReserveUber"		Accel 0.25 0.6
+
+	RunEvent HudMedicChargedLoop	0.65
+}
+
+// call to loop HudHealthBonusPulse
+event HudMedicChargedLoop
+{
+	RunEvent HudMedicCharged 0.0
+}
+
+event HudMedicChargedStop
+{
+	StopEvent HudMedicCharged 0.0
+	StopEvent HudMedicChargedLoop 0.0
+	
+	//Animate	ChargeLabel 	FgColor		"phHealth"		Linear 0.0 0.0001
+	Animate	ChargeMeter 	FgColor		"phAmmoReserveDark"		Linear 0.0 0.0001
+}
+
+//====================================
+
+event DamagedPlayer
+{
+	Animate DoinGreatLabel1 Alpha "255" Linear 0.0 0.0
+	Animate DoinGreatLabel2 Alpha "255" Linear 0.0 0.0
+	
+	Animate DoinGreatLabel1 Alpha "0" Accel 0.2 1.5
+	Animate DoinGreatLabel2 Alpha "0" Accel 0.2 1.5
+
+	Animate CrosshairDot3 Alpha "255" Linear 0.0 0.0
+	Animate CrosshairDot3 Alpha "0" Accel 0.1 0.4
+	Animate CrosshairDot2 Alpha "0" Linear 0.0 0.0
+	Animate CrosshairDot2 Alpha "255" Accel 0.1 0.4
+	Animate CrosshairDot1 Alpha "0" Linear 0.0 0.0
+	Animate CrosshairDot1 Alpha "255" Accel 0.1 0.4
+
+	RunEvent ScopeRemoval 0.0
+}
