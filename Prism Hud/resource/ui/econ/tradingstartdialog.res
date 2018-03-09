@@ -534,8 +534,8 @@
 	{
 		"ControlName"	"CExButton"
 		"fieldName"		"CancelButton2"
-		"xpos"			"r84"
-		"ypos"			"0"
+		"xpos"			"c-58"
+		"ypos"			"r80"
 		"zpos"			"1"
 		"wide"			"80"
 		"tall"			"26"
@@ -555,11 +555,11 @@
 		"sound_released"	"UI/buttonclickrelease.wav"
 		
 		"paintbackground"	"1"
-		
-		"defaultFgColor_override" "NotoWhite"
-		"armedFgColor_override" "NotoBlack"
-		"depressedFgColor_override" "NotoBlack"
-		
+			
+		"defaultFgColor_override" "NotoMenuText"
+		"armedFgColor_override" "NotoMenuText2"
+		"depressedFgColor_override" "NotoMenuText2"
+			
 		"defaultBgColor_override" "0 0 0 0"
 		"armedBgColor_override" "0 0 0 0"
 		"depressedBgColor_override" "0 0 0 0"
