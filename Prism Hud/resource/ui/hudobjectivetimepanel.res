@@ -21,8 +21,6 @@
 		if_match
 		{
 			"xpos"			"9999"
-			"wide"			"0"
-			"visible"		"0"
 		}		
 	}
 	"ImageBack"
@@ -42,8 +40,6 @@
 		if_match
 		{
 			"xpos"			"9999"
-			"wide"			"0"
-			"visible"		"0"
 		}
     }
 	"TimePanelProgressBar"
@@ -54,9 +50,7 @@
 		"ypos"				"16"
 		"zpos"				"4"	
 		"wide"				"20"
-		"wide_lodef"		"25"
 		"tall"				"19"
-		"tall_lodef"		"25"	
 		"visible"			"1"
 		"visible_minmode"	"0"
 		"enabled"			"1"
@@ -70,8 +64,6 @@
 		if_match
 		{
 			"xpos"			"9999"
-			"wide"			"0"
-			"visible"		"0"
 		}
 	}
 	"WaitingForPlayersLabel"
@@ -97,8 +89,6 @@
 		if_match
 		{
 			"xpos"			"9999"
-			"wide"			"0"
-			"visible"		"0"
 		}
 	}			
 	"WaitingForPlayersBG"
@@ -110,7 +100,6 @@
 		"zpos"			"1"
 		"wide"			"78"
 		"tall"			"20"
-		"tall_minmode"	"0"
 		"visible"		"0"
 		"enabled"		"1"
 		"image"			"../hud/objectives_timepanel_suddendeath"	
@@ -119,8 +108,6 @@
 		if_match
 		{
 			"xpos"			"9999"
-			"wide"			"0"
-			"visible"		"0"
 		}
 	}
 	"OvertimeLabel"
@@ -146,8 +133,6 @@
 		if_match
 		{
 			"xpos"			"9999"
-			"wide"			"0"
-			"visible"		"0"
 		}
 	}			
 	"OvertimeBG"
@@ -159,7 +144,6 @@
 		"zpos"			"1"
 		"wide"			"78"
 		"tall"			"20"
-		"tall_minmode"	"0"
 		"visible"		"0"
 		"enabled"		"1"
 		"image"			"../hud/objectives_timepanel_suddendeath"	
@@ -168,8 +152,6 @@
 		if_match
 		{
 			"xpos"			"9999"
-			"wide"			"0"
-			"visible"		"0"
 		}
 	}
 	"SuddenDeathLabel"
@@ -195,8 +177,6 @@
 		if_match
 		{
 			"xpos"			"9999"
-			"wide"			"0"
-			"visible"		"0"
 		}
 	}			
 	"SuddenDeathBG"
@@ -208,7 +188,6 @@
 		"zpos"			"1"
 		"wide"			"78"
 		"tall"			"20"
-		"tall_minmode"	"0"
 		"visible"		"0"
 		"enabled"		"1"
 		"image"			"../hud/objectives_timepanel_suddendeath"	
@@ -217,8 +196,6 @@
 		if_match
 		{
 			"xpos"			"9999"
-			"wide"			"0"
-			"visible"		"0"
 		}
 	}	
 	"SetupLabel"
@@ -244,8 +221,6 @@
 		if_match
 		{
 			"xpos"			"9999"
-			"wide"			"0"
-			"visible"		"0"
 		}
 	}	
 	"SetupBG"
@@ -257,7 +232,6 @@
 		"zpos"			"1"
 		"wide"			"78"
 		"tall"			"20"
-		"tall_minmode"	"0"
 		"visible"		"0"
 		"enabled"		"1"
 		"image"			"../hud/objectives_timepanel_suddendeath"	
@@ -266,8 +240,6 @@
 		if_match
 		{
 			"xpos"			"9999"
-			"wide"			"0"
-			"visible"		"0"
 		}
 	}
 	"ServerTimeLimitLabel"
@@ -292,9 +264,7 @@
 		
 		if_match
 		{
-			"xpos"			"9999"
-			"wide"			"0"
-			"visible"		"0"
+			"bgcolor_override"	"Blank"
 		}
 	}	
 	"ServerTimeLimitLabelBG"
@@ -315,8 +285,6 @@
 		if_match
 		{
 			"xpos"			"9999"
-			"wide"			"0"
-			"visible"		"0"
 		}
 	}
 }
