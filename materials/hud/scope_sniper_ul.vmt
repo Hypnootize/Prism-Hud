@@ -1,9 +1,0 @@
-"UnlitGeneric"
-{
- 	"$model" 1
-	"$basetexture" "HUD\scope_sniper_ul"
-	"$translucent" "1"
-	"$no_draw" "1"
-}
-
-
